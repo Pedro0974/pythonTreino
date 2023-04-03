@@ -7,7 +7,26 @@ musicas = [
 
 print(sorted(musicas, key=lambda musica: musica["Titulo"]))
 
-print(f'Musica que mais tocou =', max(musicas, key=lambda musica: musica['Tocou']))
+print(f'\nMusica que mais tocou = ', max(musicas, key=lambda musica: musica['Tocou'])['Titulo'])
 
-print(f'Musica que menos tocou =', min(musicas, key=lambda musica: musica['Tocou']))
+print(f'\nMusica que menos tocou = ', min(musicas, key=lambda musica: musica['Tocou'])['Titulo'])
 
+# sem usar funções min, max e lambda
+
+max = 0
+for musica in musicas:
+    if musica['Tocou'] > max:
+        max = musica['Tocou']
+
+for musica in musicas:
+    if musica['Tocou'] == max:
+        print(f'\n', musica['Titulo'])
+
+min = 9999
+for musica in musicas:
+    if musica['Tocou'] < min:
+        min = musica['Tocou']
+
+for musica in musicas:
+    if musica['Tocou'] == min:
+        print(f'\n', musica['Titulo'])
