@@ -1,0 +1,3 @@
+Ja estamos escrevendo no arquivo.
+Muito mais facil do que em outras linguagens.
+Ja podemos parar de escrever no arquivo.
