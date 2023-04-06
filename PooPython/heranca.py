@@ -18,30 +18,41 @@ Funcionario
     - cpf;
     - matricula;
 
+
+
+# Sobrescrita de metodo (Overriding)
+
+é quando reescrevemos um metodo da superclasse nas classes filhas
 """
 
 
-class Cliente:
+class Pessoa:
 
-    def __init__(self, nome, sobrenome, cpf, renda):
+    def __init__(self, nome, sobrenome, cpf):
         self.__nome = nome
         self.__sobrenome = sobrenome
         self.__cpf = cpf
-        self.__renda = renda
 
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
 
 
-class Funcionario:
+class Cliente(Pessoa):
+
+    def __init__(self, nome, sobrenome, cpf, renda):
+        Pessoa.__init__(self, nome, sobrenome, cpf)
+        self.__renda = renda
+
+
+class Funcionario(Pessoa):
 
     def __init__(self, nome, sobrenome, cpf, matricula):
-        self.__nome = nome
-        self.__sobrenome = sobrenome
-        self.__cpf = cpf
+        Pessoa.__init__(self, nome, sobrenome, cpf)
         self.__matricula = matricula
 
     def nome_completo(self):
-        return f'{self.__nome} {self.__sobrenome}'
+        
+        return f'Funcionario: {self.__matricula} Nome: {self._Pessoa__nome}'
+
 
 
