@@ -1,4 +1,9 @@
+"""
+# Sintaxe da List Comprehension
+[dado for dado in iteravel]
+"""
 # Importando o módulo statistics para calcular a mediana
+
 import statistics
 
 # Pedindo ao usuário para inserir uma lista de números separados por vírgulas
